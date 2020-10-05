@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className="title">
           Read{" "}
           <Link href="/posts/first-post">
-            <a>this page!</a>
+            <a className="my-link">this page!</a>
           </Link>
         </h1>
 
