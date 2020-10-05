@@ -12,7 +12,7 @@ export default function Layout({ children, home, notFound }) {
       return (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>I can take you home</a>
+            <a>← I can take you home</a>
           </Link>
         </div>
       );
@@ -57,20 +57,24 @@ export default function Layout({ children, home, notFound }) {
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
+            {!notFound ? (
+              <>
+                <Link href="/">
+                  <a>
+                    <img
+                      src="/images/profile.jpg"
+                      className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                      alt={name}
+                    />
+                  </a>
+                </Link>
+                <h2 className={utilStyles.headingLg}>
+                  <Link href="/">
+                    <a className={utilStyles.colorInherit}>{name}</a>
+                  </Link>
+                </h2>
+              </>
+            ) : null}
           </>
         )}
       </header>
