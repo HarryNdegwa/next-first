@@ -11,12 +11,7 @@ const firstPost = () => {
           <title>First Post</title>
         </Head>
         <h1>First Post</h1>
-        <a className="my-link" href="https://google.com" target="_blank">
-          Visit Google
-        </a>
-        <Link href="/">
-          <a className="my-link">Back to home</a>
-        </Link>
+        <p>The quick brown fox jumped over the lazy dog.</p>
       </Layout>
     </div>
   );
